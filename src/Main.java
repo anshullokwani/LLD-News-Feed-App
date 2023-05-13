@@ -17,31 +17,39 @@ public class Main {
             Scanner scanner = new Scanner(System.in);
             String in = scanner.nextLine();
             if(in.equals("signup")) {
+                in = scanner.nextLine();
                 String username = scanner.nextLine();
                 platformService.signup(username);
             }
             else if(in.equals("login")) {
+                in = scanner.nextLine();
                 String username = scanner.nextLine();
                 platformService.login(username);
             }
             else if(in.equals("post")) {
+                in = scanner.nextLine();
                 String caption = scanner.nextLine();
                 userService.post(caption);
             }
             else if(in.equals("follow")) {
+                in = scanner.nextLine();
                 String username = scanner.nextLine();
                 userService.follow(username);
             }
             else if(in.equals("reply")) {
                 in = scanner.nextLine();
+                in = scanner.nextLine();
                 Long id = Long.parseLong(in);
+                in = scanner.nextLine();
                 String reply = scanner.nextLine();
                 userService.reply(id, reply);
             } else if(in.equals("upvote")) {
                 in = scanner.nextLine();
+                in = scanner.nextLine();
                 Long id = Long.parseLong(in);
                 userService.upVote(id);
             } else if(in.equals("downvote")) {
+                in = scanner.nextLine();
                 in = scanner.nextLine();
                 Long id = Long.parseLong(in);
                 userService.downVote(id);

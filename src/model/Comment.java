@@ -19,8 +19,9 @@ public class Comment {
         return userId;
     }
 
-    public Comment(String message) {
+    public Comment(Long userId, String message) {
+        this.userId = userId;
         this.message = message;
-        time = new Date();
+        this.time = new Date();
     }
 }
